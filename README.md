@@ -1,96 +1,146 @@
-# FcaeRecognitionAttendanceSystemUsingFlask
-A real-time Face Recognition Attendance System built with Flask, OpenCV, and Firebase. Automatically detects and recognizes faces, marks attendance with timestamps, and provides a simple web interface for management.
-# Face Recognition Attendance System Using Flask
+---
 
-A real-time **Face Recognition Attendance System** built with **Flask**, **OpenCV**, **face_recognition**, and **Firebase**.  
-It detects and recognizes faces using a webcam, marks attendance automatically with timestamps, and stores data in **Firebase Realtime Database**.
+# 🎓 Face Recognition Attendance System
+
+This project is a **real-time face recognition attendance system** that automates the process of marking attendance using a webcam.
+It combines **computer vision** 👁️ and **AI-based face recognition** 🤖 with cloud integration for seamless attendance tracking.
 
 ---
 
-## Features
-- Real-time face detection and recognition  
-- Automatic attendance marking with timestamps  
-- Firebase Realtime Database and Storage integration  
-- Secure face encodings for multiple users  
-- Simple web interface built with Flask  
+## ✨ Features
+
+### 🖥 Real-Time Recognition
+
+* 🎥 Captures live video from a webcam.
+* 👤 Detects and recognizes faces using **dlib’s deep learning model**.
+* 🔄 Updates student information dynamically.
+
+### 📊 Smart Attendance Management
+
+* ⏳ Prevents duplicate attendance within a time interval (e.g., 30 sec).
+* 🖼 Displays student card with **photo, name, course, and attendance count**.
+* 🔒 Data stored securely in **Firebase Realtime Database**.
+
+### ☁ Cloud Integration
+
+* ☁️ Attendance records are updated in real-time on Firebase.
+* 📂 Student images stored in **Firebase Storage**.
 
 ---
 
-## Tech Stack
-- **Backend:** Flask (Python)
-- **Computer Vision:** OpenCV, face_recognition
-- **Database:** Firebase Realtime Database, Firebase Storage
-- **Frontend:** HTML, CSS, JavaScript
+## 🛠 Tech Stack
+
+* 🐍 **Python**
+* 🎥 **OpenCV** – Live video and image processing.
+* 🤖 **face\_recognition** – Face encoding & recognition.
+* 🔢 **NumPy** – Data handling.
+* 🖼 **cvzone** – Custom UI elements.
+* ☁ **Firebase Realtime Database & Storage** – Cloud data management.
+* 📦 **pickle** – Saves & loads face encodings.
 
 ---
 
-## Project Structure
-FaceRecognitionAttendanceSystem/
-│
-├── app.py # Main Flask application
-├── EncodeGenerator.py # Generates and saves face encodings
-├── static/ # Static files (CSS, JS, images)
-├── templates/ # HTML templates
-├── AttendanceImages/ # Images of registered users
-└── README.md # Project documentation
+## 📂 Project Structure
 
+```
+Face-Recognition-Attendance/
+│── EncodeFile.py           # Prepares face encodings for known students
+│── main.py                 # Main attendance system (real-time recognition)
+│── serviceAccountKey.json  # Firebase credentials
+│── Resources/              # UI assets (background, modes, etc.)
+│── Images/                 # Student face images
+│── EncodeFile.p            # Saved face encodings
+│── README.md               # Project documentation
+```
 
 ---
 
-## Installation
+## ⚙ How It Works
 
-### 1. Clone the repository
-bash
-git clone https://github.com/yourusername/FaceRecognitionAttendanceSystem.git
-cd FaceRecognitionAttendanceSystem
+### 1️⃣ Face Encoding
 
-2. Create a virtual environment and activate it
-bash
-Copy
-Edit
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
+* Known student images are encoded using **face\_recognition**.
+* Encodings are stored in a `.p` file for fast lookup.
 
-3. Install dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
+### 2️⃣ Real-Time Detection
 
-4. Setup Firebase
-Create a Firebase project.
+* Webcam captures live feed.
+* Faces are detected & compared with stored encodings.
 
-Enable Realtime Database and Storage.
+### 3️⃣ Attendance Marking
 
-Download your serviceAccountKey.json and place it in the project root.
+* If a student is recognized:
 
-5. Run the application
-bash
-Copy
-Edit
-python app.py
-Open your browser and go to http://127.0.0.1:5000.
+  * ✅ Attendance is marked in Firebase.
+  * ✅ Student details (name, course, attendance count, last login) are displayed.
+* Duplicate attendance is prevented within a set interval.
 
-Usage
-Add images of users in AttendanceImages/.
+---
 
-Run EncodeGenerator.py to generate encodings.
+## 📥 Installation
 
-Start the Flask server with app.py.
+1. 📂 Clone the repository:
 
-The system will mark attendance automatically when a registered face appears.
+```bash
+git clone https://github.com/bhabanisbiswal/Face-Recognition-Attendance.git
+```
 
-Use Cases
-Educational institutions
+2. 📁 Navigate into the folder:
 
-Offices and organizations
+```bash
+cd Face-Recognition-Attendance
+```
 
-Events and seminars
+3. 📦 Install dependencies:
 
+```bash
+pip install opencv-python face-recognition numpy cvzone firebase-admin
+```
 
+4. 🔑 Add your Firebase credentials:
 
-Author
-Bhabani S Biswal
+* Place `serviceAccountKey.json` in the root folder.
+* Update the database URL inside `main.py`.
+
+5. ▶ Run the system:
+
+```bash
+python main.py
+```
+
+---
+
+## 🚀 Usage
+
+* 🎥 Ensure your webcam is connected.
+* 🖼 Add student images in the `Images/` folder before encoding.
+* ⚡ Run `EncodeFile.py` to generate encodings.
+* ▶ Start `main.py` to begin real-time attendance.
+* ❌ Press **any key** to exit the system.
+
+---
+
+## 📸 Demo
+
+![UI Demo](https://github.com/bhabanisbiswal/Face-Recognition-Attendance/blob/main/demo.png)
+*(Replace with actual screenshots of your project)*
+
+---
+
+## 🔮 Future Improvements
+
+* 📱 Mobile app for attendance tracking.
+* 🌍 Multi-database support (MySQL, MongoDB).
+* 🖼 Enhanced UI with advanced animations.
+* 🔊 Voice feedback on recognition.
+
+---
+
+## 👤 Author
+
+**Bhabani S Biswal** – Python & AI/ML Developer, Student at GIET University
+📧 Email: [bhabanibiswalb17@gmail.com](mailto:bhabanibiswalb17@gmail.com)
+🔗 GitHub: [Bhabani S Biswal](https://github.com/bhabanisbiswal)
+
+---
+
