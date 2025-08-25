@@ -1,6 +1,6 @@
 ---
 
-# 🎓 Face Recognition Attendance System
+# 🖥 Face Recognition Attendance System
 
 This project is a **real-time face recognition attendance system** that automates the process of marking attendance using a webcam.
 It combines **computer vision** 👁️ and **AI-based face recognition** 🤖 with cloud integration for seamless attendance tracking.
