@@ -141,7 +141,9 @@ python main.py
 ## 👤 Author
 
 **Bhabani S Biswal** – Python & AI/ML Developer, Student at GIET University
+
 📧 Email: [bhabanibiswalb17@gmail.com](mailto:bhabanibiswalb17@gmail.com)
+
 🔗 GitHub: [Bhabani S Biswal](https://github.com/bhabanisbiswal)
 
 ---
