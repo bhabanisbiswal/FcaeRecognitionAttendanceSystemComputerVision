@@ -122,8 +122,10 @@ python main.py
 
 ## 📸 Demo
 
-![UI Demo](https://github.com/bhabanisbiswal/Face-Recognition-Attendance/blob/main/demo.png)
-*(Replace with actual screenshots of your project)*
+![UI Demo 1](https://github.com/bhabanisbiswal/FcaeRecognitionAttendanceSystemComputerVision/blob/8e996df90f97a23b61ab005202f9fb3841f04a53/sample1.png)
+
+![UI Demo 2](https://github.com/bhabanisbiswal/FcaeRecognitionAttendanceSystemComputerVision/blob/8e996df90f97a23b61ab005202f9fb3841f04a53/sample2.png)
+
 
 ---
 
